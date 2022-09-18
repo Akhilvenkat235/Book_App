@@ -1,0 +1,96 @@
+<!-- <div class="row m-0">
+     <div class="bg-color col-6 m-auto"> 
+        <div class =" bg">
+        <div class="center">
+        <div class="signin_form">
+            <div class="card-body">
+                <h1>Login Form</h1>
+                <h5 class="card-title-text-center"></h5>
+                <form class="form-signin" [formGroup]="signForm" (ngSubmit)="signIn()">
+
+                    <div class="forminput">
+                        <input type="email" formControlName="userEmail" name="userEmail" class="form-control b-radius" placeholder="Email" required />
+                        <small class="small" *ngIf="userEmail.invalid &&(userEmail.dirty||userEmail.touched)">please enter email</small>
+                    </div>
+
+                    <div *ngIf="submitted && f.userEmail.errors">
+                        <div *ngIf="userEmail.errors.userEmail" [ngClass]="{ 'is-invalid': submitted && f.userEmail.errors }">
+                            <h6>Email is not valid format</h6>
+                        </div>
+                    </div>
+    
+                    <div class="forminput">
+                        <input type="password" formControlName="userPassword" name="userPassword" class="form-control b-radius" placeholder="Password" required/>
+                     <small class="small" *ngIf="userPassord.invalid &&(userPassord.dirty||userPassord.touched)">please enter valid password</small>
+                    </div>
+    
+                    <div *ngIf="submitted && f.userPassword.errors" [ngClass]="{ 'is-invalid': submitted && f.userPassword.errors }">
+                        <div *ngIf="f.userassword.errors.minlength">
+                            <h6>passord minlength is 6</h6>
+                        </div>
+                    </div>
+    
+                    <div class="btn-align">
+                        <button class="btn btn-success" type="submit" (click)='signIn()'>Sign in</button>
+                        <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button class="btn btn-success" type="Register" routerLink='/Register' >Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <form [formGroup]="loginForm" (ngSubmit)="signIn()"  class="hema">
+        <div class="height">
+            <label for ="email">Email</label> 
+            <input type="email" placeholder="enter email" formControlName="email" class="zam">
+            <small  class="small" *ngIf="email.invalid &&(email.dirty||email.touched)">
+           email is Mandatory field
+        </small>
+        </div>
+        
+        <div>
+            <label for="password">Password</label>
+            <input type="password" placeholder="enter password" formControlName="password" class="zam">
+            <small *ngIf="password.invalid &&(password.dirty||password.touched)">
+             <small *ngIf="password.errors.required">
+                 Password cant be blank!!
+             </small>
+             <small *ngIf="password.errors.minlength">
+                 password should have minimum 8 characters
+             </small>
+            </small>
+        </div>
+            <div class="height">
+                <Input class="Submit" type="submit" [disabled]="!loginForm.valid" value="SignIn">
+            </div>
+    
+        </form> --> 
+
+        <div class ="center">
+            <h1>Login Form</h1>
+        <div class="div">
+                <div class =" bg">
+                    
+                    <!-- <div class="center"> -->
+        <mat-form-field class="mailDiv">
+            <input matInput  placeholder="Email" required name="userEmail"  [(ngModel)]="userEmail">
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+          </mat-form-field>
+          <br>
+          <mat-form-field class="mailDiv">
+            <input matInput placeholder="Password" type="password" minlength="8" maxlength="15"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+              required name="password" [(ngModel)]="userPassword">
+          </mat-form-field>
+          <br>
+          <button mat-raised-button color="primary" (click)="signIn()">Submit</button>
+
+          <br>
+
+    <button routerLink="/registration" mat-button color="primary">Create Account</button>
+</div>
+        </div>
+        </div>

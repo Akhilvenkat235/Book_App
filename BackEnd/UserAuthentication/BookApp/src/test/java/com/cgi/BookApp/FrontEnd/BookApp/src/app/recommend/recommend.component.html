@@ -1,0 +1,19 @@
+<h3>Recommendations</h3>
+<div class = "recommend">
+   <div class="row">
+ <div *ngFor="let recommend of allRecommendBooks" class="column">
+   <div class="col-md-4">
+     <div class="well album">
+   <span>Title:{{recommend.title_suggest}}</span>
+   <span>Author:{{recommend.author_name}}</span>
+   <ul style="list-style-type:none;">
+       <li *ngIf="book.isbn">
+           <li *ngFor = "let  isbn of book.isbn">
+         <img src ={{baseURL}}{{isbn}}-M.jpg>
+       </li>
+       </ul>
+       </div>
+       </div>
+       </div>
+       </div>
+       </div>

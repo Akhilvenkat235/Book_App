@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: mongodb
+    username: 
+    password: 
+  jpa:
+    hibernate:
+      ddl-auto: create
+      
+      
+    show-sql: true
+server:
+  port: 8089
+
+

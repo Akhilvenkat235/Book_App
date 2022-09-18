@@ -1,0 +1,37 @@
+
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <img src="/assets/img/bookimage.jpg" width="100" height="65">
+     
+      <span>BOOK APP
+        <button class="w3-button w3-light-grey" mat-button routerLink="/home">Home</button> </span>&nbsp;
+        <button class="w3-button w3-light-grey" mat-button *ngIf="checkUser()" routerLink="/favourite">Favourite</button>&nbsp;
+        <button class="w3-button w3-light-grey" mat-button *ngIf="checkUser()" routerLink="/recommend">Recommend</button>&nbsp;
+  
+  
+  
+      <span class="example-fill-remaining-space"></span>
+      <span>
+        
+        <button class="w3-button w3-light-grey" mat-button routerLink="/search">Search</button>&nbsp;
+        <button class="w3-button w3-light-grey" mat-button  *ngIf="!checkUser()" routerLink="/login">Login</button>&nbsp;
+        <button class="w3-button w3-light-grey" mat-button *ngIf="!checkUser()" routerLink="/register">Register</button>&nbsp;
+        <!-- <button (click)="submit()"></button> -->
+        <!-- <a *ngIf='loggedInUserId == true'> -->
+    
+            <!-- <a href="#" class="btn btn-info btn-lg">
+                <span class="glyphicon glyphicon-log-out"></span> Log out
+              </a>&nbsp; -->
+              
+              <button class="w3-button w3-light-grey" mat-button *ngIf="checkUser()" routerLink="/logout">Log Out</button>&nbsp; 
+            <button class="w3-button w3-light-grey" mat-button  *ngIf="checkUser()" routerLink="/dashboard">Dashboard</button>&nbsp;
+            <button  class="w3-button w3-light-grey" mat-button  *ngIf="checkUser()" routerLink="/update">updateProfile</button>&nbsp;
+  
+        <!-- </a> -->
+        </span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  
+  
+  
+  

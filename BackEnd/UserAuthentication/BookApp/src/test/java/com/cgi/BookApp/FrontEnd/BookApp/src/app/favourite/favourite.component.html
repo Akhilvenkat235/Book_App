@@ -1,0 +1,41 @@
+
+<h2 style="color: brown;text-align: center">Favourite Section</h2>
+<hr>
+<div class="books">
+  <div class="row">
+
+    <div *ngFor="let favourite of favourites" class="column">
+      <div class="col-md-4">
+        <div class="well album">
+
+          <b> Title: </b><span>{{favourite.title_name}}</span>&nbsp;
+         <b> Author:</b><span>{{favourite.author_name}}</span>
+         <!-- <b>Book Id:</b><span>{{favourite.isbn}}</span> -->
+          <ul style="list-style-type:none;">
+
+            <li *ngIf="favourite.isbn">
+            <!-- <li *ngFor="let  isbn of favourite.isbn"> -->
+              <!-- {{baseURL}}{{isbn}}-M.jpg -->
+              <img src={{baseURL}}{{favourite.isbn}}-S.jpg (click)="onSelect(book)">
+              <div>
+                <div>
+                  <mat-card-footer>
+                    <button class="addButton" mat-raised-button style="background-color:rgb(243, 150, 150)"  (click)="clickUnfavourite(favourite.isbn)">UnFavorite
+                      <i class="fa fa-heart-o" style="font-size:18px;color:red"></i> </button>
+                  </mat-card-footer>
+
+
+
+                </div>
+
+
+              </div>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

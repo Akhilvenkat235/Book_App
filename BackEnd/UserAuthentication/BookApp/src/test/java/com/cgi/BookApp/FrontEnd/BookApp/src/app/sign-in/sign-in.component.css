@@ -1,0 +1,70 @@
+.center {
+  justify-content: center;
+}
+
+h1{
+  margin-left: 150px;
+  text-decoration-color: indigo;;
+}
+
+.loginDiv{
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}  
+
+.mailDiv {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  text-decoration-color: black;;
+}
+
+.button button,  
+.button {
+margin-right: 8px;
+}
+
+.div {
+  width: 300px;
+  border: 8px solid grey;
+  padding: 30px;
+  margin: 20px;
+}
+
+.center {
+  z-index: 1;
+  position: absolute;
+  left: 440px;
+  top: 100px;
+}
+
+.bg{
+	height:auto;
+	min-height:100vh;
+	background-image:url("L:\book-app\FrontEnd\BookApp\src\assets\book.gif");
+	background-size:600px;
+	background-position:left;
+}
+
+/* .centerforcmatch {
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  
+}
+
+.centerforsignin {
+  font-weight: normal;
+  text-align: center;
+  font-size: 20px;
+  color: rgb(153, 132, 132);
+}
+
+.centerforContinuetoGmail {
+  font-weight: normal;
+  text-align: center;
+  font-size: 20px;
+  color: rgb(153, 132, 132);
+} */
+

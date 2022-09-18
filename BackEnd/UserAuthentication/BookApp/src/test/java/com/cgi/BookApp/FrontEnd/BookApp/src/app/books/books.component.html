@@ -1,0 +1,33 @@
+<body>
+<form class="example-form" [formGroup]="searchForm" (ngSubmit)="onSearch()">
+    <mat-form-field class="example-full-width">
+      <input matInput  type ="text" formControlName="searchText" placeholder="search" >
+    </mat-form-field>
+    <mat-form-field class="search">
+        <mat-label>SearchBy</mat-label>
+        <select matNativeControl formControlName="selectedValue">
+          <option value="Title">Title</option>
+          <option value="Author">Author</option>
+        </select>
+      </mat-form-field>
+      <button mat-raised-button color="primary">Search</button>
+    </form>
+<div *ngFor="let book of books">
+  <mat-card class="content"> 
+  <b> Title: </b><span>{{book.title_suggest}}</span>&nbsp;
+    <b> Author:</b><span>{{book.author_name}}</span>
+  <ul style="list-style-type:none;">
+    <li *ngIf="book.isbn">
+      
+        <img src={{baseURL}}{{book.isbn[0]}}-M.jpg (click)="onSelect(book)">
+
+
+
+
+    <mat-card-footer class="footer">
+      <button class="addButton" style="background-color:rgb(243, 150, 150)" mat-raised-button (click)="clickFavourite(book,book.isbn)"> Favorite
+        <i class="fa fa-heart-o" style="font-size:18px;color:red;"></i> </button>
+    </mat-card-footer></li></ul></mat-card>
+    
+  </div>
+ </body>

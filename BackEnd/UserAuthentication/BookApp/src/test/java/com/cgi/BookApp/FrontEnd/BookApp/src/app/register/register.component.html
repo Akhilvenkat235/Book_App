@@ -1,0 +1,30 @@
+
+
+
+<body>
+
+    <div class="header>"><h4 style="text-align: center;">REGISTRATION</h4></div>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <div class="main" style="text-align: center">
+   <div class="example-container" style="background-color:grey">
+        <mat-form-field class="firstName">
+          <input matInput placeholder="Enter your Name" formControlName="firstName" required>
+        </mat-form-field><br>
+     
+                <mat-form-field class="lastName">
+                  <input matInput placeholder="Enter your Email" formControlName="email" required>
+                </mat-form-field><br>
+            
+                        <mat-form-field class="password">
+                          <input matInput placeholder="Enter your password" type="password" formControlName="password" required>
+                        </mat-form-field><br>
+                        <button mat-raised-button color="primary" type="submit"  [disabled]="!registrationForm.valid">Register</button>
+                      
+                    </div>
+                </div>
+                </form>
+</body>
+
+
+
+

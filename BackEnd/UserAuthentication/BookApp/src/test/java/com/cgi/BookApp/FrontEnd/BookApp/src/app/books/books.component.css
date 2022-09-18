@@ -1,0 +1,29 @@
+.search
+{
+    margin: 40px;
+}
+.content
+{
+    position: relative;
+    left:200px;
+    max-width: 400px;
+  display: grid;
+    min-height: 200px;
+}
+.footer
+{
+    position: absolute;
+   
+    bottom: 180px;
+    left: 230px;
+}
+img
+{
+    max-width:400px;
+    height: 200px;
+}
+body{
+    background-image: url("/assets/img/search.jpg");
+    background-size: cover;
+    background-color: cadetblue;
+}
