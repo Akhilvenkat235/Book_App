@@ -45,7 +45,7 @@ public class LoginController {
         try {
 
         	loginService.saveUser(user);
-        	
+			System.out.println("user is"+user);
             return new ResponseEntity<String>("User registered successfully", HttpStatus.CREATED);
 
 
